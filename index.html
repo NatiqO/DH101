@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DH 101 - Critical Making</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>DH 101</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#makes" onclick="showSection('makes')">Makes</a></li>
+                <li><a href="#reflections" onclick="showSection('reflections')">Reflections</a></li>
+                <li><a href="#pages" onclick="showSection('pages')">Pages</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h2>Critical Making Portfolio</h2>
+                <p>Documenting my digital humanities journey this semester.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card" onclick="showSection('makes')">
+                    <h3>Makes</h3>
+                    <p>Weekly artifacts and projects created through the making process.</p>
+                    <span class="cta">Explore →</span>
+                </div>
+                <div class="card" onclick="showSection('reflections')">
+                    <h3>Reflections</h3>
+                    <p>Deep dive into learning and critical thinking every week.</p>
+                    <span class="cta">Explore →</span>
+                </div>
+                <div class="card" onclick="showSection('pages')">
+                    <h3>Resources</h3>
+                    <p>About me, accessibility info, and helpful guides.</p>
+                    <span class="cta">Explore →</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Makes Section -->
+        <section id="makes" class="section">
+            <h2>Weekly Makes</h2>
+            <div class="grid grid-2">
+                <div class="week-card" onclick="loadWeek('makes', 1)">
+                    <h3>Week 1</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 3)">
+                    <h3>Week 3</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 4)">
+                    <h3>Week 4</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 5)">
+                    <h3>Week 5</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 6)">
+                    <h3>Week 6</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 7)">
+                    <h3>Week 7</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 8)">
+                    <h3>Week 8</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 9)">
+                    <h3>Week 9</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 10)">
+                    <h3>Week 10</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 11)">
+                    <h3>Week 11</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 12)">
+                    <h3>Week 12</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('makes', 13)">
+                    <h3>Week 13</h3>
+                </div>
+            </div>
+            <div id="week-content" class="week-detail"></div>
+        </section>
+
+        <!-- Reflections Section -->
+        <section id="reflections" class="section">
+            <h2>Weekly Reflections</h2>
+            <div class="grid grid-2">
+                <div class="week-card" onclick="loadWeek('reflections', 1)">
+                    <h3>Week 1</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 2)">
+                    <h3>Week 2</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 3)">
+                    <h3>Week 3</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 4)">
+                    <h3>Week 4</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 5)">
+                    <h3>Week 5</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 6)">
+                    <h3>Week 6</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 7)">
+                    <h3>Week 7</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 8)">
+                    <h3>Week 8</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 9)">
+                    <h3>Week 9</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 10)">
+                    <h3>Week 10</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 11)">
+                    <h3>Week 11</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 12)">
+                    <h3>Week 12</h3>
+                </div>
+                <div class="week-card" onclick="loadWeek('reflections', 13)">
+                    <h3>Week 13</h3>
+                </div>
+            </div>
+            <div id="week-content" class="week-detail"></div>
+        </section>
+
+        <!-- Pages Section -->
+        <section id="pages" class="section">
+            <h2>Pages & Resources</h2>
+            <div class="grid grid-2">
+                <div class="page-card" onclick="loadPage('about')">
+                    <h3>About Me</h3>
+                </div>
+                <div class="page-card" onclick="loadPage('accessibility')">
+                    <h3>Accessibility</h3>
+                </div>
+                <div class="page-card" onclick="loadPage('how-i-use-ai')">
+                    <h3>How I Use AI</h3>
+                </div>
+                <div class="page-card" onclick="loadPage('markdown-guide')">
+                    <h3>Markdown Guide</h3>
+                </div>
+                <div class="page-card" onclick="loadPage('sustainability')">
+                    <h3>Sustainability</h3>
+                </div>
+            </div>
+            <div id="page-content" class="page-detail"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DH 101 - Critical Making | <a href="https://github.com/natiq/DH101">View on GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
