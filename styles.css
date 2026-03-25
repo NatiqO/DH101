@@ -5,13 +5,13 @@
 }
 
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --light-bg: #ecf0f1;
-    --dark-text: #2c3e50;
-    --light-text: #7f8c8d;
-    --border-color: #bdc3c7;
+    --primary-color: #6B4423;
+    --secondary-color: #FFD700;
+    --accent-color: #D4A574;
+    --light-bg: #FFF8DC;
+    --dark-text: #6B4423;
+    --light-text: #9B7653;
+    --border-color: #D2B48C;
 }
 
 body {
@@ -213,6 +213,32 @@ body {
     margin: 1.5rem 0;
     max-width: 100%;
     border-radius: 8px;
+}
+
+.week-detail code,
+.page-detail code {
+    background-color: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+.week-detail pre,
+.page-detail pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.week-detail pre code,
+.page-detail pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #333;
 }
 
 /* Footer */

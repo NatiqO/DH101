@@ -18,6 +18,13 @@ function showSection(sectionId) {
 function markdownToHtml(markdown) {
     let html = markdown;
 
+    // Preserve iframes (extract them first)
+    const iframes = [];
+    html = html.replace(/<iframe[^>]*>.*?<\/iframe>/gs, (match) => {
+        iframes.push(match);
+        return `__IFRAME_${iframes.length - 1}__`;
+    });
+
     // Headers
     html = html.replace(/^### (.*?)$/gm, '<h3>$1</h3>');
     html = html.replace(/^## (.*?)$/gm, '<h2>$1</h2>');
@@ -32,17 +39,31 @@ function markdownToHtml(markdown) {
     // Links
     html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
 
-    // Unordered lists
+    // Code blocks
+    html = html.replace(/```(.*?)```/gs, '<pre><code>$1</code></pre>');
+
+    // Unordered lists (multi-line)
     html = html.replace(/^\- (.*?)$/gm, '<li>$1</li>');
-    html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+    html = html.replace(/(<li>.*?<\/li>)/s, '<ul>$1</ul>');
 
-    // Line breaks
-    html = html.replace(/\n\n/g, '</p><p>');
-    html = '<p>' + html + '</p>';
+    // Split into paragraphs by double newlines
+    let paragraphs = html.split(/\n\n+/);
+    paragraphs = paragraphs.map(para => {
+        para = para.trim();
+        if (para.startsWith('<h') || para.startsWith('<ul') || para.startsWith('<pre') || para.startsWith('__IFRAME')) {
+            return para;
+        }
+        if (para) {
+            return '<p>' + para.replace(/\n/g, '<br>') + '</p>';
+        }
+        return '';
+    });
+    html = paragraphs.join('\n');
 
-    // Clean up multiple p tags
-    html = html.replace(/<\/p><p>/g, '</p><p>');
-    html = html.replace(/<p><\/p>/g, '');
+    // Restore iframes
+    iframes.forEach((iframe, index) => {
+        html = html.replace(`<p>__IFRAME_${index}__</p>`, iframe);
+    });
 
     return html;
 }
@@ -51,15 +72,16 @@ function markdownToHtml(markdown) {
 function loadWeek(type, weekNum) {
     const weekPad = String(weekNum).padStart(2, '0');
     let filePath = `${type}/week${weekPad}.md`;
+    const contentId = type === 'makes' ? 'makes-content' : 'reflections-content';
     
     // Handle cases where week doesn't exist
     const validWeeks = {
-        makes: [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        makes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
         reflections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     };
 
     if (!validWeeks[type] || !validWeeks[type].includes(weekNum)) {
-        document.getElementById('week-content').innerHTML = '<p>Content not available for this week.</p>';
+        document.getElementById(contentId).innerHTML = '<p>Content not available for this week.</p>';
         return;
     }
 
@@ -67,11 +89,11 @@ function loadWeek(type, weekNum) {
         .then(response => response.text())
         .then(data => {
             const htmlContent = markdownToHtml(data);
-            document.getElementById('week-content').innerHTML = htmlContent;
+            document.getElementById(contentId).innerHTML = htmlContent;
         })
         .catch(error => {
             console.error('Error loading file:', error);
-            document.getElementById('week-content').innerHTML = '<p>Error loading content. Please try again.</p>';
+            document.getElementById(contentId).innerHTML = '<p>Error loading content. Please try again.</p>';
         });
 }
 
@@ -95,3 +117,8 @@ function loadPage(pageName) {
 document.addEventListener('DOMContentLoaded', () => {
     showSection('home');
 });
+
+// Open week in new tab
+function openWeekInNewTab(type, weekNum) {
+    window.open(`week.html?type=${type}&week=${weekNum}`, '_blank');
+}

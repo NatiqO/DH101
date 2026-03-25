@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week Content</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>DH 101</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Back to Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="section active">
+            <div id="week-content" class="week-detail">Loading...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DH 101 - Critical Making | <a href="https://github.com/natiq/DH101">View on GitHub</a></p>
+    </footer>
+
+    <script>
+        // Convert Markdown to HTML (simple converter)
+        function markdownToHtml(markdown) {
+            let html = markdown;
+
+            // Preserve iframes (extract them first)
+            const iframes = [];
+            html = html.replace(/<iframe[^>]*>.*?<\/iframe>/gs, (match) => {
+                iframes.push(match);
+                return `__IFRAME_${iframes.length - 1}__`;
+            });
+
+            // Headers
+            html = html.replace(/^### (.*?)$/gm, '<h3>$1</h3>');
+            html = html.replace(/^## (.*?)$/gm, '<h2>$1</h2>');
+            html = html.replace(/^# (.*?)$/gm, '<h2>$1</h2>');
+
+            // Bold
+            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+            // Italic
+            html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+            // Links
+            html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+            // Code blocks
+            html = html.replace(/```(.*?)```/gs, '<pre><code>$1</code></pre>');
+
+            // Unordered lists (multi-line)
+            html = html.replace(/^\- (.*?)$/gm, '<li>$1</li>');
+            html = html.replace(/(<li>.*?<\/li>)/s, '<ul>$1</ul>');
+
+            // Split into paragraphs by double newlines
+            let paragraphs = html.split(/\n\n+/);
+            paragraphs = paragraphs.map(para => {
+                para = para.trim();
+                if (para.startsWith('<h') || para.startsWith('<ul') || para.startsWith('<pre') || para.startsWith('__IFRAME')) {
+                    return para;
+                }
+                if (para) {
+                    return '<p>' + para.replace(/\n/g, '<br>') + '</p>';
+                }
+                return '';
+            });
+            html = paragraphs.join('\n');
+
+            // Restore iframes
+            iframes.forEach((iframe, index) => {
+                html = html.replace(`<p>__IFRAME_${index}__</p>`, iframe);
+            });
+
+            return html;
+        }
+
+        // Get query parameters
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const week = params.get('week');
+
+        console.log('Page loaded with type:', type, 'week:', week);
+
+        // Load content on page load
+        if (type && week) {
+            loadWeekContent(type, parseInt(week));
+        } else {
+            document.getElementById('week-content').innerHTML = '<p>No week specified. <a href="index.html">Go back</a></p>';
+        }
+
+        function loadWeekContent(type, weekNum) {
+            const weekPad = String(weekNum).padStart(2, '0');
+            let filePath = `${type}/week${weekPad}.md`;
+            
+            console.log('Fetching:', filePath);
+
+            fetch(filePath)
+                .then(response => {
+                    console.log('Response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.arrayBuffer();
+                })
+                .then(buffer => {
+                    // Decode the buffer as UTF-8
+                    const decoder = new TextDecoder('utf-8');
+                    const data = decoder.decode(buffer);
+                    console.log('Data loaded, length:', data.length);
+                    console.log('First 200 chars:', data.substring(0, 200));
+                    const htmlContent = markdownToHtml(data);
+                    console.log('HTML generated, length:', htmlContent.length);
+                    document.getElementById('week-content').innerHTML = htmlContent;
+                    // Update page title
+                    document.title = `Week ${weekNum} - DH 101`;
+                })
+                .catch(error => {
+                    console.error('Error loading file:', error);
+                    document.getElementById('week-content').innerHTML = '<p>Error loading content: ' + error.message + '</p><p><a href="index.html">Go back</a></p>';
+                });
+        }
+    </script>
+</body>
+</html>
