@@ -18,6 +18,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark-text);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><g opacity="0.3"><circle cx="100" cy="100" r="40" fill="%23FFD700"/><circle cx="100" cy="100" r="35" fill="%23FFC700"/><circle cx="100" cy="100" r="25" fill="%23DAA520"/><g stroke="%238B4513" stroke-width="3" fill="none"><line x1="100" y1="60" x2="100" y2="25"/><line x1="120" y1="72" x2="145" y2="45"/><line x1="135" y1="90" x2="170" y2="90"/><line x1="120" y1="128" x2="145" y2="155"/><line x1="100" y1="140" x2="100" y2="175"/><line x1="80" y1="128" x2="55" y2="155"/><line x1="65" y1="90" x2="30" y2="90"/><line x1="80" y1="72" x2="55" y2="45"/></g></g></svg>') repeat;
+    background-size: 250px 250px;
+    background-attachment: fixed;
     background-color: #f8f9fa;
 }
 

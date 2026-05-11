@@ -2,4 +2,8 @@
 # Week 1 Reflection
 
 Reflect 1: What counts as “making” in the age of AI? What might be gained/lost when machines participate in making?
-In the age of AI, “making” can mean guiding and working with machines, not just building things by hand. We gain speed and easier creation, but we may lose hands-on understanding and personal responsibility if we rely too much on AI.
+In the age of AI, “making” is no longer limited to physically creating something from scratch, but also includes guiding, prompting, and collaborating with machines to produce outcomes. Instead of being the sole creator, the human becomes more of a director—deciding what to ask, what to keep, and what to revise. This shift changes making from a purely hands-on process to one that involves decision-making, interpretation, and responsibility over outputs.
+
+One major gain of this shift is speed and accessibility. AI allows people to generate ideas, visuals, and writing much faster than before, lowering the barrier to creation. As discussed in Data Feminism, tools shape who gets to participate in knowledge production, and AI can expand access for people who may not have had traditional technical or artistic skills. At the same time, however, this raises concerns about how power operates within these systems, since the data and models behind AI are not neutral and often reflect existing inequalities.
+
+There are also important losses to consider. As Kate Crawford argues, AI systems are built on extractive processes, including data collection and labor that are often invisible to users. When making becomes heavily dependent on AI, it can distance creators from the material and social conditions behind what they produce. In addition, relying too much on AI may reduce hands-on understanding and weaken a person’s ability to create independently, since the machine is doing much of the generative work.
