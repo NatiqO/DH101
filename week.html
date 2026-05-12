@@ -5,6 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week Content</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .week-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .week-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .week-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.7;
+        }
+
+        .week-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .week-meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .week-meta-label {
+            font-weight: 600;
+            opacity: 0.8;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .week-meta-value {
+            font-size: 1.1rem;
+            margin-top: 0.3rem;
+        }
+
+        .week-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .week-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .scroll-to-top.show {
+            display: flex;
+        }
+
+        .toc-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .toc-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc-list a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .toc-list a:hover {
+            color: #764ba2;
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .week-title {
+                font-size: 1.8rem;
+            }
+
+            .week-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .nav-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -14,22 +229,61 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#" onclick="goBack(); return false;" style="cursor: pointer;">← Back</a></li>
-                <li><a href="index.html">Back to Portfolio</a></li>
+                <li><a href="index.html">Portfolio</a></li>
             </ul>
         </div>
     </nav>
 
     <main class="container">
+        <div id="week-header" class="week-header" style="display: none;">
+            <div class="week-header-content">
+                <div class="breadcrumb">
+                    <a href="index.html">DH 101</a>
+                    <span>/</span>
+                    <span id="breadcrumb-type"></span>
+                    <span>/</span>
+                    <span id="breadcrumb-week"></span>
+                </div>
+                <h1 class="week-title" id="week-title">Loading...</h1>
+                <p class="week-subtitle" id="week-subtitle"></p>
+                <div class="nav-buttons">
+                    <button class="nav-btn" onclick="goBack()">← Back to Section</button>
+                    <a href="index.html" class="nav-btn">🏠 Home</a>
+                </div>
+            </div>
+        </div>
+
         <section class="section active">
-            <div id="week-content" class="week-detail">Loading...</div>
+            <div id="week-content" class="week-detail">
+                <div style="text-align: center; padding: 3rem;">
+                    <div class="loading-spinner"></div>
+                    <p style="margin-top: 1rem; color: #718096;">Loading content...</p>
+                </div>
+            </div>
         </section>
     </main>
+
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button>
 
     <footer>
         <p>&copy; 2026 DH 101 - Critical Making | <a href="https://github.com/natiq/DH101">View on GitHub</a></p>
     </footer>
 
     <script>
+        // Show scroll-to-top button
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('scrollToTop');
+            if (window.pageYOffset > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
         // Convert Markdown to HTML (simple converter)
         function markdownToHtml(markdown) {
             let html = markdown;
@@ -101,8 +355,6 @@
         const type = params.get('type');
         const week = params.get('week');
 
-        console.log('Page loaded with type:', type, 'week:', week);
-
         // Load content on page load
         if (type && week) {
             loadWeekContent(type, parseInt(week));
@@ -110,7 +362,52 @@
             document.getElementById('week-content').innerHTML = '<p>No week specified. <a href="index.html">Go back</a></p>';
         }
 
+        function getWeekTitle(type, weekNum) {
+            const titles = {
+                makes: {
+                    1: 'Reverse Engineering an AI Project',
+                    3: 'AI Selfie & Identity',
+                    4: 'Comic & Storytelling',
+                    5: 'GIF & Remix Culture',
+                    6: 'Text & Distant Reading',
+                    7: 'Mapping AI Worlds',
+                    8: 'Networks of Knowledge & Power',
+                    9: 'Bots & Generators',
+                    10: 'Games & Play',
+                    11: 'AI & Labor',
+                    12: 'AI & Ecology',
+                    13: 'Futures of AI & Humanity'
+                },
+                reflections: {
+                    1: 'Making In the Age of AI',
+                    2: 'Defining What It Means to Be Human',
+                    3: 'Authenticity and Identity with AI',
+                    4: 'AI in Storytelling: Tool or Collaborator?',
+                    5: 'How does AI alter authorship and remix culture?',
+                    6: 'Machines Reading Literature',
+                    7: 'AI, Power, Labor, and Environment',
+                    8: 'Visibility in AI Networks',
+                    9: 'Creativity in Generative AI',
+                    10: 'AI, Play, Rules, and Narrative',
+                    11: 'Invisible Labor in AI',
+                    12: 'AI Sustainability and Tradeoffs',
+                    13: 'AI Futures: Utopian or Dystopian?',
+                    14: 'Being Human in the Age of AI'
+                }
+            };
+            return titles[type]?.[weekNum] || `Week ${weekNum}`;
+        }
+
         function loadWeekContent(type, weekNum) {
+            // Update header
+            document.getElementById('week-header').style.display = 'block';
+            document.getElementById('breadcrumb-type').textContent = type.charAt(0).toUpperCase() + type.slice(1);
+            document.getElementById('breadcrumb-week').textContent = `Week ${weekNum}`;
+
+            const title = getWeekTitle(type, weekNum);
+            document.getElementById('week-title').textContent = title;
+            document.title = `${title} - DH 101`;
+
             // Map week numbers to reflection filenames
             const reflectionFileMap = {
                 1: 'making-in-the-age-of-ai.md',
@@ -137,12 +434,9 @@
                 const weekPad = String(weekNum).padStart(2, '0');
                 filePath = `${type}/week${weekPad}.md`;
             }
-            
-            console.log('Fetching:', filePath);
 
             fetch(filePath)
                 .then(response => {
-                    console.log('Response status:', response.status);
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
@@ -152,17 +446,12 @@
                     // Decode the buffer as UTF-8
                     const decoder = new TextDecoder('utf-8');
                     const data = decoder.decode(buffer);
-                    console.log('Data loaded, length:', data.length);
-                    console.log('First 200 chars:', data.substring(0, 200));
                     const htmlContent = markdownToHtml(data);
-                    console.log('HTML generated, length:', htmlContent.length);
                     document.getElementById('week-content').innerHTML = htmlContent;
-                    // Update page title
-                    document.title = `Week ${weekNum} - DH 101`;
                 })
                 .catch(error => {
                     console.error('Error loading file:', error);
-                    document.getElementById('week-content').innerHTML = '<p>Error loading content: ' + error.message + '</p><p><a href="index.html">Go back</a></p>';
+                    document.getElementById('week-content').innerHTML = '<p style="color: #e53e3e;">Error loading content: ' + error.message + '</p><p><a href="index.html">Go back to home</a></p>';
                 });
         }
     </script>
