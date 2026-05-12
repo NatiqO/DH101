@@ -2,8 +2,9 @@
 
 ## Make 12: Futures Artifact (Green Loop)
 
-![Future artifact showing transformation of data center into community space](../assets/images/ai-future.png)
-
+<img src="https://natiqo.github.io/DH101/images/ai-greenloop.png" 
+    
+    
 ### Context Statement
 
 This artifact depicts Columbus, Ohio in the year 2042, almost ten years after the DC-17

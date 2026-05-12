@@ -4,6 +4,8 @@
 
 <img src="https://natiqo.github.io/DH101/images/ai-labor.png" 
 
+
+
 ### Research Documentation
 
 For this project, I focused on data labeling as a form of hidden labor behind AI systems. I
