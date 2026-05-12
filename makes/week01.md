@@ -4,7 +4,7 @@
 
 [View This Person Does Not Exist](https://thispersondoesnotexist.com)
 
-<img src="/images/ai-face.png" alt="AI generated face example" style="max-width: 100%; height: auto;">
+![AI generated face example](images/ai-face.png)
 ---
 
 ### What I Made
