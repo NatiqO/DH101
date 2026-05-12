@@ -1,8 +1,7 @@
 # Week 10 – Games & Play
 
 ## Make 9: AI Game (Emberfall)
-
-<a href="https://natiqo.github.io/DH101/Game/" target="_blank">
+<a href="https://natiqo.github.io/DH101/Game/all%20of%20inky/" target="_blank">
   Play My Game
 </a>
 
