@@ -2,7 +2,9 @@
 
 ## Make 9: AI Game (Emberfall)
 
-![Screenshot of Emberfall game interface](../assets/images/ai-game.png)
+<a href="https://natiqo.github.io/DH101/Game/" target="_blank">
+  Play My Game
+</a>
 
 ### Design Statement
 
