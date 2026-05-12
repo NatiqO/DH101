@@ -1,8 +1,13 @@
 # Week 7 – Mapping AI Worlds
 
 ## The Artifact
-Describe or embed your artifact here.
-Include images, links, or media as appropriate.
+
+<a href="https://www.google.com/maps/d/u/2/edit?hl=en&mid=10caGJO9gCUqz7h98QgoxlatQsNL2_ho&ll=4.652254419959739%2C0&z=2" target="_blank">
+  Open Map
+</a>
+
+<img src="https://natiqo.github.io/DH101/images/ai-maps.png" 
+
 
 ## Process Notes
 How did you make this? Kumu.io
