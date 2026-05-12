@@ -12,7 +12,6 @@ Training large AI models requires a significant amount of energy and can produce
 - MIT Technology Review — *AI’s Energy Footprint*
 - Wikipedia — *List of Most-Visited Websites*
 - ExxonMobil — *Carbon Data*
-- ChatGPT
 
 ## Personal Reflection
 
