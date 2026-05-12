@@ -4,7 +4,7 @@
 
 [View This Person Does Not Exist](https://thispersondoesnotexist.com)
 
-![AI generated face example](makes/../images/ai-face.png)
+![AI generated face example](https://natiqo.github.io/DH101/images/ai-face.png)
 ---
 
 ### What I Made
