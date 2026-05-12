@@ -2,9 +2,7 @@
 
 ### Project
 
-**This Person Does Not Exist**  
-https://thispersondoesnotexist.com
-
+<iframe src="https://thispersondoesnotexist.com" width="100%" height="500px"></iframe>
 ---
 
 ### What I Made
