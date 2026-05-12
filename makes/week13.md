@@ -1,6 +1,6 @@
 ## Make 12: Futures Artifact (Green Loop)
 
-<img src="https://natiqo.github.io/DH101/images/ai-greenloop.png" 
+<img src="https://natiqo.github.io/DH101/images/ai-greenloop.png">
     
 
 ### Context Statement

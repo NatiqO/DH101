@@ -6,9 +6,7 @@
   Open Map
 </a>
 
-<img src="https://natiqo.github.io/DH101/images/ai-maps.png" 
-     alt="Custom Google Map showing connections in digital ecosystem" 
-     style="max-width: 100%; height: auto;">
+<img src="https://natiqo.github.io/DH101/images/ai-maps.png">
 
 ## Process Notes
 How did you make this? Google my maps

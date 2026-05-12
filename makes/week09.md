@@ -1,6 +1,6 @@
 ## Make 8: AI Image Series
 
-<img src="https://natiqo.github.io/DH101/images/ai-chosen.png" 
+<img src="https://natiqo.github.io/DH101/images/ai-chosen.png"> 
      
 
 

@@ -3,7 +3,7 @@
 ## The Artifact
 <a href="https://voyant-tools.org/tool/Links/?query=freedom&query=ring&query=let&corpus=ca22203292eb653ca6cc461cf8a0ff72" target="_blank">Open Voyant Links tool</a>
 
-<img src="https://natiqo.github.io/DH101/images/ai-voyant.png" 
+<img src="https://natiqo.github.io/DH101/images/ai-voyant.png"> 
 
 
 ## ChatGPT Analysis 

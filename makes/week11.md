@@ -1,6 +1,6 @@
 ## Make 10: AI & Labor
 
-<img src="https://natiqo.github.io/DH101/images/ai-labor.png" 
+<img src="https://natiqo.github.io/DH101/images/ai-labor.png">
 
 
 

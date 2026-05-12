@@ -1,6 +1,6 @@
 ## Make 2: AI Selfie
 
-<img src="https://natiqo.github.io/DH101/images/ai-selfie.png" 
+<img src="https://natiqo.github.io/DH101/images/ai-selfie.png">
      
 
 ### Reflection
