@@ -145,5 +145,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Open week in new tab
 function openWeekInNewTab(type, weekNum) {
-    window.open(`week.html?type=${type}&week=${weekNum}`, '_blank');
+    window.location.href = `week.html?type=${type}&week=${weekNum}`;
 }
