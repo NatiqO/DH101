@@ -1,5 +1,3 @@
-# Week 9 – Bots & Generators
-
 ## Make 8: AI Image Series
 
 <img src="https://natiqo.github.io/DH101/images/ai-chosen.png" 

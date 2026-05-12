@@ -1,10 +1,8 @@
-# Week 13 – Futures of AI & Humanity
-
 ## Make 12: Futures Artifact (Green Loop)
 
 <img src="https://natiqo.github.io/DH101/images/ai-greenloop.png" 
     
-    
+
 ### Context Statement
 
 This artifact depicts Columbus, Ohio in the year 2042, almost ten years after the DC-17

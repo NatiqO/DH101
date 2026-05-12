@@ -1,5 +1,3 @@
-# Week 4 – Comic & Storytelling
-
 ## Make 3: AI Comic
 
 <img src="https://natiqo.github.io/DH101/images/ai-comic.png" 

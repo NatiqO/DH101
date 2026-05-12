@@ -1,5 +1,3 @@
-# Week 12 – AI & Ecology
-
 ## Make 11: AI Carbon Footprint Visualization
 
 <a href="https://docs.google.com/presentation/d/e/2PACX-1vS30xTASDNVIDkV1fe2IYFGWkF2JwMSiGVLUJ38zvmlx4uKZNyVCT7yN45duvR-OBFbKTGB4_ACXBH5/pub" target="_blank">

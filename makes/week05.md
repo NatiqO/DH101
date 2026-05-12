@@ -1,4 +1,3 @@
-# Week 5 – GIF & Remix Culture
 ## Make 4: AI GIF
 
 I am sadly unable to show the GIF since sora.ai is now unavailable. 

@@ -1,5 +1,3 @@
-# Week 8 – Networks of Knowledge & Power
-
 ## Make 7: Networks of Knowledge
 
 <a href="https://kumu.io" target="_blank">

@@ -1,4 +1,4 @@
-# Week 6 – Text & Distant Reading
+# Make 5 – Text & Distant Reading
 
 ## The Artifact
 <a href="https://voyant-tools.org/tool/Links/?query=freedom&query=ring&query=let&corpus=ca22203292eb653ca6cc461cf8a0ff72" target="_blank">Open Voyant Links tool</a>

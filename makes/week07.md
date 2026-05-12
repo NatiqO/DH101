@@ -1,4 +1,4 @@
-# Week 7 – Mapping AI Worlds
+# Make 6 – Mapping AI Worlds
 
 ## The Artifact
 
