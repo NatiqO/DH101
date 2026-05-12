@@ -2,7 +2,7 @@
 
 ### Project
 
-<iframe src="https://thispersondoesnotexist.com" width="100%" height="500px"></iframe>
+[View This Person Does Not Exist](https://thispersondoesnotexist.com)
 ---
 
 ### What I Made
