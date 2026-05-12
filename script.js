@@ -70,15 +70,40 @@ function markdownToHtml(markdown) {
 
 // Load week content
 function loadWeek(type, weekNum) {
-    const weekPad = String(weekNum).padStart(2, '0');
-    let filePath = `${type}/week${weekPad}.md`;
     const contentId = type === 'makes' ? 'makes-content' : 'reflections-content';
+    
+    // Map week numbers to reflection filenames
+    const reflectionFileMap = {
+        1: 'making-in-the-age-of-ai.md',
+        2: 'defining-what-it-means-to-be-human.md',
+        3: 'authenticity-and-identity-with-ai.md',
+        4: 'ai-in-storytelling-tool-or-collaborator.md',
+        5: 'ai-authorship-and-remix-culture.md',
+        6: 'machines-reading-literature.md',
+        7: 'ai-power-labor-and-environment.md',
+        8: 'visibility-in-ai-networks.md',
+        9: 'creativity-in-generative-ai.md',
+        10: 'ai-play-rules-and-narrative.md',
+        11: 'invisible-labor-in-ai.md',
+        12: 'ai-sustainability-and-tradeoffs.md',
+        13: 'ai-futures-utopian-or-dystopian.md',
+        14: 'being-human-in-the-age-of-ai.md'
+    };
     
     // Handle cases where week doesn't exist
     const validWeeks = {
         makes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-        reflections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        reflections: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     };
+    
+    // Get the filename based on type
+    let filePath;
+    if (type === 'reflections' && reflectionFileMap[weekNum]) {
+        filePath = `reflections/${reflectionFileMap[weekNum]}`;
+    } else {
+        const weekPad = String(weekNum).padStart(2, '0');
+        filePath = `${type}/week${weekPad}.md`;
+    }
 
     if (!validWeeks[type] || !validWeeks[type].includes(weekNum)) {
         document.getElementById(contentId).innerHTML = '<p>Content not available for this week.</p>';
