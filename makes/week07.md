@@ -7,10 +7,11 @@
 </a>
 
 <img src="https://natiqo.github.io/DH101/images/ai-maps.png" 
-
+     alt="Custom Google Map showing connections in digital ecosystem" 
+     style="max-width: 100%; height: auto;">
 
 ## Process Notes
-How did you make this? Kumu.io
+How did you make this? Google my maps
 What decisions did you make? which networks to use.
 
 ## Network Analysis

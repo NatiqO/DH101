@@ -2,7 +2,13 @@
 
 ## Make 7: Networks of Knowledge
 
-![Network visualization of apps, companies, and data connections](../assets/images/ai-network.png)
+<a href="https://kumu.io" target="_blank">
+  Open Kumu Visualization
+</a>
+
+<img src="https://natiqo.github.io/DH101/images/ai-kumu.png" 
+     alt="Network visualization showing relationships between apps, companies, and data" 
+     style="max-width: 100%; height: auto;">
 
 ### Reflection
 
