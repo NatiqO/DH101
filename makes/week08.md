@@ -4,9 +4,7 @@
   Open Kumu Visualization
 </a>
 
-<img src="https://natiqo.github.io/DH101/images/ai-kumu.png" 
-     alt="Network visualization showing relationships between apps, companies, and data" 
-     style="max-width: 100%; height: auto;">
+<img src="https://natiqo.github.io/DH101/images/ai-kumu.png">
 
 ### Reflection
 
