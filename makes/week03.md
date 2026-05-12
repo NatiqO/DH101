@@ -3,9 +3,7 @@
 ## Make 2: AI Selfie
 
 <img src="https://natiqo.github.io/DH101/images/ai-selfie.png" 
-     alt="AI generated selfie comparison" 
-     style="max-width: 100%; height: auto;">
-
+     
 
 ### Reflection
 
