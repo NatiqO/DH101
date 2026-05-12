@@ -2,7 +2,10 @@
 
 ## Make 8: AI Image Series
 
-![AI generated tornado image series](../assets/images/ai-tornado.png)
+<img src="https://natiqo.github.io/DH101/images/ai-chosen.png" 
+     alt="Selected AI generated tornado images" 
+     style="max-width: 100%; height: auto; margin-bottom: 20px;">
+
 
 ### Reflection
 
@@ -20,6 +23,10 @@ everything is actually moving and happening in the moment.
 
 ### Some Rejected Ones
 
+<img src="https://natiqo.github.io/DH101/images/ai-rejected.png" 
+     alt="Rejected AI generated tornado images" 
+     style="max-width: 100%; height: auto;">
+     
 I didn't choose the other ones because they were either too similar or lacked strong detail. Some
 images did not capture the same level of realism or intensity. Like a lot of them had a lot of
 inconsistencies, blurred tornadoes, sometimes when you added another prompt it would take out

@@ -2,7 +2,9 @@
 
 ## Make 3: AI Comic
 
-![AI comic showing a dog and squirrel interacting over a shoe](../assets/images/ai-comic.png)
+<img src="https://natiqo.github.io/DH101/images/ai-comic.png" 
+     alt="AI generated comic showing dog and squirrel" 
+     style="max-width: 100%; height: auto;">
 
 ### Reflection
 
