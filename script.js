@@ -138,12 +138,21 @@ function loadPage(pageName) {
         });
 }
 
+// Handle hash navigation
+function handleHash() {
+    const hash = window.location.hash.slice(1) || 'home';
+    showSection(hash);
+}
+
 // Initialize on load
 document.addEventListener('DOMContentLoaded', () => {
-    showSection('home');
+    handleHash();
 });
 
-// Open week in new tab
+// Handle hash changes
+window.addEventListener('hashchange', handleHash);
+
+// Open week with referrer
 function openWeekInNewTab(type, weekNum) {
-    window.location.href = `week.html?type=${type}&week=${weekNum}`;
+    window.location.href = `week.html?type=${type}&week=${weekNum}&referrer=${type}`;
 }

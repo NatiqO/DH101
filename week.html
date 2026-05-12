@@ -13,6 +13,7 @@
                 <h1>DH 101</h1>
             </div>
             <ul class="nav-menu">
+                <li><a href="#" onclick="goBack(); return false;" style="cursor: pointer;">← Back</a></li>
                 <li><a href="index.html">Back to Portfolio</a></li>
             </ul>
         </div>
@@ -81,6 +82,18 @@
             });
 
             return html;
+        }
+
+        // Go back to previous section
+        function goBack() {
+            const params = new URLSearchParams(window.location.search);
+            const referrer = params.get('referrer');
+            
+            if (referrer === 'makes' || referrer === 'reflections' || referrer === 'pages') {
+                window.location.href = `index.html#${referrer}`;
+            } else {
+                window.location.href = 'index.html#home';
+            }
         }
 
         // Get query parameters
