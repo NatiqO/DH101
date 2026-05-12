@@ -7,6 +7,7 @@ Include images, links, or media as appropriate.
 ## Process Notes
 How did you make this? Kumu.io
 What decisions did you make? which networks to use.
+
 ## Network Analysis
 The network shows the relationships between apps, companies, devices, and data in my personal digital ecosystem. The most important  nodes are Google, Apple, and Meta because they connect to many other elements throughout the entire network. Google especially, since it owns multiple services like YouTube, Gmail, and Google Search, and it collects large amounts of data. Then you also have Apple which is also another important node because it controls the iPhone and Safari, which many apps depend on.
 The network forms several connected groups. One group includes social media apps like TikTok, Instagram, Snapchat, and WhatsApp, which are all focused on communication and content sharing. Another group includes Google services like YouTube, Gmail, Google Search, and Google Maps, which are tied together through one company and a shared data system. There is also a data-focused group made up of location data, messages, search history, viewing habits, and purchase history. These groups show how different parts of my digital life are organized and separate but still connected through the dominant companies that manage and control them.
