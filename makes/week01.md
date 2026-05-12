@@ -3,6 +3,7 @@
 ### Project
 
 [View This Person Does Not Exist](https://thispersondoesnotexist.com)
+![AI generated face example](../images/ai-face.png)
 ---
 
 ### What I Made
