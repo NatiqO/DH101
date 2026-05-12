@@ -218,6 +218,16 @@ body {
     border-radius: 8px;
 }
 
+.week-detail img,
+.page-detail img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 .week-detail code,
 .page-detail code {
     background-color: #f4f4f4;
