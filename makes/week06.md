@@ -1,9 +1,7 @@
 # Week 6 – Text & Distant Reading
 
 ## The Artifact
-Describe or embed your artifact here.
-Include images, links, or media as appropriate.
-<iframe style='width: 506px; height: 344px;' src='https://voyant-tools.org/tool/Links/?query=freedom&query=ring&query=let&corpus=ca22203292eb653ca6cc461cf8a0ff72'></iframe>
+<iframe src="https://voyant-tools.org/tool/Links/?query=freedom&query=ring&query=let&corpus=ca22203292eb653ca6cc461cf8a0ff72" width="100%" height="700px"></iframe>
 
 ChatGPT ANALYSIS - Martin Luther King Jr.’s “I Have a Dream” speech argues for racial equality by showing the gap between America’s promises of freedom and the reality Black Americans faced. He uses repetition, especially phrases like “I have a dream” and “let freedom ring,” to build emotion and make his message memorable. The tone shifts from urgent and serious to hopeful and inspiring, using imagery and references to the Bible and founding documents to connect with his audience and strengthen his message.
 ## Process Notes

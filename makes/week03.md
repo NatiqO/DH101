@@ -1,4 +1,4 @@
-## Make 2: AI Selfie & Identity
+## Week 3: AI Selfie & Identity
 
 ## Make 2: AI Selfie
 
