@@ -1,5 +1,3 @@
-# How I Used AI
-
 ## Tools I Used
 
 Throughout this course, I used several AI tools including ChatGPT, DALL·E, Midjourney, Pollo AI, ImagineArt, and Sora AI. Each tool played a different role depending on the project. Some were used for generating images, others for helping with writing, and some for troubleshooting technical issues.
