@@ -2,8 +2,9 @@
 
 ## Make 11: AI Carbon Footprint Visualization
 
-![Carbon footprint visualization slides showing AI energy use and emissions](../assets/images/ai-carbon.png)
-
+<a href="https://docs.google.com/presentation/d/e/2PACX-1vS30xTASDNVIDkV1fe2IYFGWkF2JwMSiGVLUJ38zvmlx4uKZNyVCT7yN45duvR-OBFbKTGB4_ACXBH5/pub" target="_blank">
+  View Slides
+</a>
 ### Research Documentation
 
 For this project, I used a mix of sources to understand the environmental impact of artificial intelligence, especially its carbon footprint. The Stanford University School of Engineering article helped explain how AI systems rely on data centers and powerful computers that use large amounts of electricity. The MIT Technology Review article provided more detail about how much energy AI actually consumes and how its impact is often underestimated or overlooked. I also used Wikipedia for general background information, which helped me understand the scale of online platforms and how widely AI is used. Also used, the ExxonMobil page on carbon capture to get data to better understand how carbon emissions are measured, and how much AI is producing in comparison to aviation industries.
